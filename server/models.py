@@ -7,6 +7,7 @@ from sqlalchemy.ext.hybrid import hybrid_property
 # db = SQLAlchemy()
 class Book(db.Model, SerializerMixin):
     __tablename__ = 'books'
+    # models
 
     serialize_rules = ('-author.books',)
 
