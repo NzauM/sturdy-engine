@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Books from './Books'
+import Form from './Form'
+import Signup from './Signup'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,10 +17,11 @@ function App() {
 
   return (
     <>
-      
+      <Signup/>
       <h1>Lib App</h1>
       <h1>{salamu}</h1>
       <Books/>
+      <Form/>
       
     </>
   )
