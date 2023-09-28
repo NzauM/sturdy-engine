@@ -1,6 +1,6 @@
 # from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_serializer import SerializerMixin
-from setup import db, bcrypt
+from server.setup import db, bcrypt
 from sqlalchemy.ext.hybrid import hybrid_property
 
 

@@ -1,14 +1,14 @@
-from setup import app
+from server.setup import app
 from flask_restful import Resource, Api
-from models import Book, Author, db, User
+from server.models import Book, Author, db, User
 from flask import jsonify,make_response, request, abort, session
 
 api = Api(app)
 @app.before_request
 def check_if_logged_in():  
-    session['new_id'] = "random string"
+    # session['new_id'] = "random string"
     print(session) 
-    if not session['user2_id'] and request.endpoint != 'sign_up' :
+    if not session.get('user2_id') and request.endpoint != 'sign_up' :
         return {'error': 'Unauthorized'}, 401
 @app.route('/')
 def home():
